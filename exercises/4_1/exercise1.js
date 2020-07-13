@@ -5,3 +5,5 @@ let resultado = a + b;
 console.log(resultado)
 let resultado = a - b;
 console.log(resultado)
+let resultado = a * b;
+console.log(resultado)
