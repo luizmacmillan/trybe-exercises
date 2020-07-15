@@ -6,7 +6,7 @@ if ((n > 1) && (n % 2 !== 0)) {
     let tamTotalDeEspacos = (n - cont) / 2;
     let espaco = '';
     
-     for (espacos = tamTotalDeEspacos; espacos >= 1; espacos -= 1){
+    for (espacos = tamTotalDeEspacos; espacos >= 1; espacos -= 1){
       espaco += ' ';
     }
     
