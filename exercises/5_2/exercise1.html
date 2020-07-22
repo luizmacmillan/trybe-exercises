@@ -92,6 +92,24 @@
       smallImage.className = "small-image";
 
       document.querySelector(".left-content").appendChild(smallImage);
+
+      let novaLista = document.createElement("ul");
+      novaLista.className = "nova-lista";
+
+      document.querySelector(".right-content").appendChild(novaLista);
+
+      function criadorDeLis(arrayDeNumerosPorExtenso) {
+        for (let x = 0; x < arrayDeNumerosPorExtenso.length; x += 1) {
+          let novoLi = document.createElement("li");
+          novoLi.innerHTML = arrayDeNumerosPorExtenso[x];
+
+          document.querySelector(".nova-lista").appendChild(novoLi);
+        }
+      }
+
+      let numerosPorExtenso = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      
+      criadorDeLis(numerosPorExtenso);
     </script>
   </body>
 </html>
