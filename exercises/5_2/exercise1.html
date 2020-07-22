@@ -142,6 +142,17 @@
       rightContent.style.marginRight = "auto";
 
       centerContent.style.backgroundColor = "green";
+
+      function removedorDeH3sDeTrasParaFrente(param) {
+        for (let x = 1; x <= param; x += 1) {
+          let deOndeTirar = document.querySelector('.nova-lista');
+          deOndeTirar.lastChild.className = "removendo";
+          lastChild = document.querySelector(".removendo");
+          deOndeTirar.removeChild(lastChild);
+        }
+      }
+      
+      removedorDeH3sDeTrasParaFrente(2);
     </script>
   </body>
 </html>
