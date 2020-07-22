@@ -110,6 +110,19 @@
       let numerosPorExtenso = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
       
       criadorDeLis(numerosPorExtenso);
+
+      function criadorDeH3s(arrayDeConteudosH3s) {
+        for (let x = 0; x < arrayDeConteudosH3s.length; x += 1) {
+          let novaH3 = document.createElement("h3");
+          novaH3.innerHTML = arrayDeConteudosH3s[x];
+
+          document.querySelector(".main-content").appendChild(novaH3);
+        }
+      }
+
+      let conteudosDasH3s = ['Conteúdo 1.', 'Conteúdo 2.', 'Conteúdo 3.'];
+
+      criadorDeH3s(conteudosDasH3s);
     </script>
   </body>
 </html>
