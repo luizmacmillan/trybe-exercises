@@ -66,6 +66,12 @@
       mainContent.class = "main-content";
 
       document.querySelector("body").appendChild(mainContent);
+
+      let centerContent = document.createElement("div");
+      centerContent.class = "center-content";
+
+      //document.querySelector("body").firstChild.nextSibling.nextSibling.nextSibling = div.class main-content.
+      document.querySelector("body").firstChild.nextSibling.nextSibling.nextSibling.appendChild(centerContent);
     </script>
   </body>
 </html>
