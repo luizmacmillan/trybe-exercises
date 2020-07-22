@@ -125,6 +125,17 @@
       criadorDeH3s(conteudosDasH3s);
 
       document.body.firstElementChild.nextSibling.className = "title";
+
+      function adicionadorDeClasses(nomeDaClasse) {
+        let primeiroElemento = document.querySelector(".main-content").firstElementChild.nextElementSibling.nextElementSibling;
+        
+        for (let x = 1; x <= 3; x += 1) {
+          primeiroElemento.nextElementSibling.className = nomeDaClasse;
+          primeiroElemento = primeiroElemento.nextElementSibling;
+        }
+      }
+
+      adicionadorDeClasses('description');
     </script>
   </body>
 </html>
