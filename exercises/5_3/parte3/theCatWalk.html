@@ -9,26 +9,38 @@
   <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
 
   <script>
-var img = document.getElementsByTagName('img')[0];
-img.style.left = '0px';
-var walkForwards = true;
-function catWalk() {
-  var currentLeft = parseInt(img.style.left);
-  
-  if (walkForwards && (currentLeft > (window.innerWidth-img.width))) {
-    walkForwards = false;
-  }
-  if (!walkForwards && (currentLeft <= 0)) {
-    walkForwards = true;
-  }
-  
-  if (walkForwards) {
-    img.style.left = (currentLeft + 10) + 'px';
-  } else {
-    img.style.left = (currentLeft - 10) + 'px';
-  }
-}
-window.setInterval(catWalk, 50);
+    let kitty = document.querySelector('img');
+    kitty.style.left = '0px';
+    let movement = 0;
+    let maximum = window.innerWidth - 290;
+    let side = 'left';
+
+    window.setInterval(catWalk, 50);
+
+    function catWalk() {
+      switch (side) {
+        case 'left':
+          if (parseInt(kitty.style.left) < maximum) {
+            movement += 10;
+            kitty.style.left = `${parseFloat(movement)}px`;
+          } else {
+            kitty.style.webkitTransform = 'scaleX(-1)';
+            kitty.style.transform = 'scaleX(-1)';
+            side = 'right';
+          }
+        break;
+        case 'right':
+          if (parseInt(kitty.style.left) > 0) {
+            movement -= 10;
+            kitty.style.left = `${parseFloat(movement)}px`;
+          } else {
+            kitty.style.webkitTransform = 'scaleX(1)';
+            kitty.style.transform = 'scaleX(1)';
+            side = 'left';
+          }
+        break;
+      }
+    }
   </script>
  </body>
 </html>
