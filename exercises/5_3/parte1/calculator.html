@@ -37,34 +37,31 @@
   <div id="solution"></div>
 
   <script>
-    const squareButton = document.querySelector('#square-button');
-    const halfButton = document.querySelector('#half-button');
-    const percentButton = document.querySelector('#percent-button');
-    const areaButton = document.querySelector('#area-button');
+    let squareInput = document.querySelector('#square-input');
+    let halfInput = document.querySelector('#half-input');
+    let percent2Input = document.querySelector('#percent2-input');
+    let areaInput = document.querySelector('#area-input');
     let solutionDiv = document.querySelector('#solution');
 
-    squareButton.addEventListener('click', function() {
-      let squareInput = document.querySelector('#square-input');
+    squareInput.addEventListener('keyup', function() {
       squareInput = squareInput.value;
       solutionDiv.innerText = squareNumber(squareInput);
     });
 
-    halfButton.addEventListener('click', function() {
-      let halfInput = document.querySelector('#half-input');
+    halfInput.addEventListener('keyup', function() {
+      
       halfInput = halfInput.value;
       solutionDiv.innerText = halfOf(halfInput);
     });
 
-    percentButton.addEventListener('click', function() {
+    percent2Input.addEventListener('keyup', function() {
       let percent1Input = document.querySelector('#percent1-input');
       percent1Input = percent1Input.value;
-      let percent2Input = document.querySelector('#percent2-input');
       percent2Input = percent2Input.value;
       solutionDiv.innerText = percentOf(percent1Input, percent2Input);
     });
 
-    areaButton.addEventListener('click', function() {
-      let areaInput = document.querySelector('#area-input');
+    areaInput.addEventListener('keyup', function() {
       areaInput = areaInput.value;
       solutionDiv.innerText = areaOfCircle(areaInput);
     });
