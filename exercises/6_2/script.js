@@ -17,25 +17,12 @@ const cleanerBtn = document.querySelector('#cleaner');
 const formulary = document.querySelector('#form');
 const consolidatedField = document.querySelector('#consolidated');
 
+document.getElementById('first-day').DatePickerX.init({format: 'dd/mm/yyyy'});
+
 function preventDefault() {
   validationLog.innerText = '';
   if (!emailRegex.test(emailInput.value)) {
     validationLog.innerText += 'E-mail inválido. |';
-  }
-
-  const firstDayValue = firstDayInput.value;
-  const day = firstDayValue.substr(0, 2);
-  const month = firstDayValue.substr(3, 2);
-  const year = firstDayValue.substr(6, 4);
-
-  if (day < 1 || day > 31) {
-    validationLog.innerText += 'Dia inválido. |';
-  }
-  if (month < 1 || month > 12) {
-    validationLog.innerText += 'Mês inválido. |';
-  }
-  if (year < 0) {
-    validationLog.innerText += 'Ano inválido. |';
   }
 
   if (validationLog.innerText === '') {
