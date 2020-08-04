@@ -19,12 +19,10 @@ const consolidatedField = document.querySelector('#consolidated');
 
 document.getElementById('first-day').DatePickerX.init({format: 'dd/mm/yyyy'});
 
-function preventDefault() {
-  validationLog.innerText = '';
-  if (!emailRegex.test(emailInput.value)) {
-    validationLog.innerText += 'E-mail inválido. |';
-  }
+validation.init();
+validation.init("#form");
 
+function printConsolidation() {
   if (validationLog.innerText === '') {
     consolidatedField.innerHTML = '';
     const name = document.createElement('h1');
@@ -63,7 +61,7 @@ function preventDefault() {
   }
 }
 
-checkBtn.addEventListener('click', preventDefault);
+checkBtn.addEventListener('click', printConsolidation);
 
 function stateOptions() {
   for (let x = 0; x < stateInitials.length; x += 1) {
