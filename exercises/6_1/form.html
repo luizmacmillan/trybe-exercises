@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Exercise 6.1</title>
+</head>
+<body>
+  <form action="post" id="form">
+    <fieldset>
+      <label for="name">Nome:
+        <input type="text" required="required" maxlength="40" name="name" id="name">
+      </label>
+
+      <label for="email">E-mail:
+        <input type="text" required="required" maxlength="50" name="email" id="email">
+      </label>
+
+      <label for="cpf">CPF:
+        <input type="text" required="required" maxlength="11" name="cpf" id="cpf">
+      </label>
+
+      <label for="adress">Endereço:
+        <input type="text" required="required" maxlength="200" name="adress" id="adress">
+      </label>
+
+      <label for="city">Cidade:
+        <input type="text" required="required" maxlength="28" name="city" id="city">
+      </label>
+
+      <label for="state">Estado:
+        <select required="required" name="state" id="state">
+          <option selected value="">  </option>
+        </select>
+      </label>
+
+      <label for="living-place">Moradia:
+        <input type="text" required="required" name="living-place" id="living-place">
+      </label>
+    </fieldset>
+    <fieldset>
+      <label for="resume">Resumo do Currículo:
+        <textarea rows="3" cols="30" required="required" maxlength="1000" name="resume" id="resume"></textarea>
+      </label>
+
+      <label for="office">Cargo:
+        <input type="text" required="required" maxlength="40" name="office" id="office">
+      </label>
+
+      <label for="office-description">Descrição do cargo:
+        <input type="text" required="required" maxlength="500" name="office-description" id="office-description">
+      </label>
+      
+      <label for="first-day">Data de início:
+        <input type="text" required="required" maxlength="10" name="first-day"" id="first-day"">
+      </label>
+    </fieldset>
+  </form>
+  <button id="check-data">Validar Dados</button>
+  <p id="validation-log"></p>
+  <button id="cleaner">Limpar Campos</button>
+  <div id="consolidated"></div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
