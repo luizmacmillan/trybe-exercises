@@ -3,64 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="bulma.min.css">
+  <link rel="stylesheet" href="styles.css".css">
   <title>Exercise 6.1</title>
 </head>
 <body>
-  <form action="post" id="form">
-    <fieldset>
-      <label for="name">Nome:
-        <input type="text" required="required" maxlength="40" name="name" id="name">
-      </label>
+  <form class="form" action="post" id="form">
+    <fieldset class="field">
+      <div class="container">
+        <label class="label" for="name">Nome:
+          <input class="input" type="text" required="required" maxlength="40" name="name" id="name">
+        </label>
+      </div>
 
-      <label for="email">E-mail:
-        <input type="text" required="required" maxlength="50" name="email" id="email">
-      </label>
+      <div class="container">
+        <label class="label" for="email">E-mail:
+          <input class="input" type="text" required="required" maxlength="50" name="email" id="email">
+        </label>
+      </div>
 
-      <label for="cpf">CPF:
-        <input type="text" required="required" maxlength="11" name="cpf" id="cpf">
-      </label>
+      <div class="container">
+        <label class="label" for="cpf">CPF:
+          <input class="input" type="text" required="required" maxlength="11" name="cpf" id="cpf">
+        </label>
+      </div>
 
-      <label for="adress">Endereço:
-        <input type="text" required="required" maxlength="200" name="adress" id="adress">
-      </label>
+      <div class="container">
+        <label class="label" for="adress">Endereço:
+          <input class="input" type="text" required="required" maxlength="200" name="adress" id="adress">
+        </label>
+      </div>
 
-      <label for="city">Cidade:
-        <input type="text" required="required" maxlength="28" name="city" id="city">
-      </label>
+      <div class="container">
+        <label class="label" for="city">Cidade:
+          <input class="input" type="text" required="required" maxlength="28" name="city" id="city">
+        </label>
+      </div>
 
-      <label for="state">Estado:
-        <select required="required" name="state" id="state">
-          <option selected value="">  </option>
-        </select>
-      </label>
+      <div class="container">
+        <label class="label" for="state">Estado:
+          <select class="select" required="required" name="state" id="state">
+            <option selected value="">  </option>
+          </select>
+        </label>
+      </div>
 
-      <label for="living-place">Moradia:
-        <input type="text" required="required" name="living-place" id="living-place">
-      </label>
+      <div class="container">
+        <label class="label" for="living-place">Moradia:
+          <input class="input" type="text" required="required" name="living-place" id="living-place">
+        </label>
+      </div>
     </fieldset>
-    <fieldset>
-      <label for="resume">Resumo do Currículo:
-        <textarea rows="3" cols="30" required="required" maxlength="1000" name="resume" id="resume"></textarea>
-      </label>
+    <fieldset class="field">
+      <div class="container">
+        <label class="label" for="resume">Resumo do Currículo:
+          <textarea class="textarea" rows="3" cols="30" required="required" maxlength="1000" name="resume" id="resume"></textarea>
+        </label>
+      </div>
 
-      <label for="office">Cargo:
-        <input type="text" required="required" maxlength="40" name="office" id="office">
-      </label>
+      <div class="container">
+        <label class="label" for="office">Cargo:
+          <input class="input" type="text" required="required" maxlength="40" name="office" id="office">
+        </label class="label">
+      </div>
 
-      <label for="office-description">Descrição do cargo:
-        <input type="text" required="required" maxlength="500" name="office-description" id="office-description">
-      </label>
-      
-      <label for="first-day">Data de início:
-        <input type="text" required="required" maxlength="10" name="first-day"" id="first-day"">
-      </label>
+      <div class="container">
+        <label class="label" for="office-description">Descrição do cargo:
+          <input class="input" type="text" required="required" maxlength="500" name="office-description" id="office-description">
+        </label>
+      </div>
+
+      <div class="container">
+        <label class="label" for="first-day">Data de início:
+          <input class="input" type="text" required="required" maxlength="10" name="first-day"" id="first-day"">
+        </label>
+      </div>
     </fieldset>
   </form>
-  <button id="check-data">Validar Dados</button>
-  <p id="validation-log"></p>
-  <button id="cleaner">Limpar Campos</button>
-  <div id="consolidated"></div>
+  <div class="button-area">
+    <button class="button is-success" id="check-data">Validar Dados</button>
+    <button class="button is-danger" id="cleaner">Limpar Campos</button>
+  </div>
+  <p class="p" id="validation-log"></p>
+  <div class="field consolidated-field">
+    <div class="subtitle" id="consolidated"></div>
+  </div>
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
