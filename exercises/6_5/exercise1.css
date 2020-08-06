@@ -37,9 +37,10 @@ figure {
 
 @media screen and (min-width: 950px) {
   body {
-    background-color: darkgray;
-    font-size: 1.15em;
-    margin: 0 20px;
+    background-color: antiquewhite;
+    font-size: 1em;
+    margin: 0 10px;
+    max-width: 1400px;
   }
 
   .pictures {
