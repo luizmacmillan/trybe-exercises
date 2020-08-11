@@ -52,3 +52,8 @@ function studentSum(object) {
   }
   return totalStudents;
 }
+
+function getValueByNumber(object, positionKey) {
+  const listOfKeys = Object.keys(lesson1);
+  return object[`${listOfKeys[positionKey]}`];
+}
