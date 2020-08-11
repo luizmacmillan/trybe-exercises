@@ -57,3 +57,18 @@ function getValueByNumber(object, positionKey) {
   const listOfKeys = Object.keys(object);
   return object[`${listOfKeys[positionKey]}`];
 }
+
+function verifyPair(object, key, value) {
+  const listOfKeys = Object.keys(object);
+  const listOfValues = Object.values(object);
+
+  let result = false;
+
+  for (let i = 0; i < listOfKeys.length; i += 1) {
+    if (listOfKeys[i] === key && listOfValues[i] === value) {
+      result = true;
+    }
+  }
+
+  return result;
+}
