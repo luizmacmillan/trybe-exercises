@@ -19,7 +19,7 @@ const lesson3 = {
 };
 
 function addTurn(object, key, value) {
-  object.key = value;
+  object[key] = value;
 }
 
 addTurn(lesson2, 'turno', 'manhã');
@@ -35,3 +35,9 @@ function objectLength(object) {
 function objectValuesList(object) {
   return Object.values(object);
 }
+
+const allLessons = {
+  lesson1: Object.assign({}, lesson1),
+  lesson2: Object.assign({}, lesson2),
+  lesson3: Object.assign({}, lesson3)
+};
