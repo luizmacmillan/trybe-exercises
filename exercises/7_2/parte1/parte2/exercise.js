@@ -27,3 +27,7 @@ addTurn(lesson2, 'turno', 'manhã');
 function objectKeysList(object) {
   return Object.keys(object);
 }
+
+function objectLength(object) {
+  return Object.keys(object).length;
+}
