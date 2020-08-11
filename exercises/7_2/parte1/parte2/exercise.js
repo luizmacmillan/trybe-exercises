@@ -41,3 +41,14 @@ const allLessons = {
   lesson2: Object.assign({}, lesson2),
   lesson3: Object.assign({}, lesson3)
 };
+
+function studentSum(object) {
+  let totalStudents = 0;
+  const listOfLessons = Object.keys(allLessons);
+  
+  for (let x = 0; x < listOfLessons.length; x += 1) {
+    const stageLesson = listOfLessons[x];
+    totalStudents += allLessons[`${stageLesson}`].numeroEstudantes;
+  }
+  return totalStudents;
+}
