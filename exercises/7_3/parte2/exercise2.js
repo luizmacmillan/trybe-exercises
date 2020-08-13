@@ -2,7 +2,12 @@ const assert = require('assert');
 // escreva a função wordLengths aqui
 
 const wordLengths = (array) => {
-  let result
+  let result = [];
+
+  for (let i = 0; i < array.length; i += 1) {
+    result.push(array[i].length);
+  }
+  return result;
 }
 
 const words = ['sun', 'potato', 'roundabout', 'pizza'];
