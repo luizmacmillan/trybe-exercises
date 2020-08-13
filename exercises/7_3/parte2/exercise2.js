@@ -8,7 +8,7 @@ const wordLengths = (array) => {
     result.push(array[i].length);
   }
   return result;
-}
+};
 
 const words = ['sun', 'potato', 'roundabout', 'pizza'];
 const expected = [3, 6, 10, 5];
