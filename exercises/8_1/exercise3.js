@@ -76,8 +76,7 @@ const expected_result = {
 
 function getNamedBook() {
   // escreva seu código aqui
-  const whichBook = books.find((book) => book.name.length === 26)
-  return whichBook;
+  return books.find((book) => book.name.length === 26);
 }
 
 assert.deepEqual(getNamedBook(), expected_result);
