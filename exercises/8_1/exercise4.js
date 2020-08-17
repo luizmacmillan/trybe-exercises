@@ -110,6 +110,8 @@ const expected_result = [
 
 function booksOrderedByReleaseYearDesc() {
   // escreva aqui seu código
+  const newBooksOrder = books.sort((a, b) => b.releaseYear - a.releaseYear);
+  return newBooksOrder;
 }
 
 
