@@ -65,8 +65,17 @@ const books = [
 
 const expected_result = false;
 
+function itsTheSameYear(book, otherBook) {
+  let twoTimes = 0;
+  if (book.author.birthYear === otherBook.author.birthYear) twoTimes += 1;
+  if (twoTimes > 1) return false;
+  if (twoTimes = 1) return true;
+}
+
 function authorUnique() {
-  // escreva seu código aqui
+  // escreva seu código aqui - Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
+  if (books.forEach((book) => books.forEach((otherBook) => itsTheSameYear(book, otherBook) ===  true) === true)) return true;
+  else return false;
 }
 
 assert.equal(authorUnique(), expected_result);
