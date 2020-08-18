@@ -65,8 +65,13 @@ const books = [
 
 const expected_result = 'O Senhor dos Anéis';
 
+function hasThreeInitials(name) {
+  if (name.split(' ')[0].length === 2 && name.split(' ')[1].length === 2 && name.split(' ')[2].length === 2) return name;
+}
+
 function authorWith3DotsOnName() {
   // escreva seu código aqui
+  return books.find((book) => book.author.name === hasThreeInitials(book.author.name)).name;
 }
 
 assert.deepEqual(authorWith3DotsOnName(), expected_result);
