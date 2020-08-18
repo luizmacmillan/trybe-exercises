@@ -108,6 +108,7 @@ const expected_result = [
 
 function fantasyOrScienceFiction() {
   // escreva seu código aqui
+  return books.filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica');
 }
 
 assert.deepEqual(fantasyOrScienceFiction(), expected_result);
