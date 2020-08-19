@@ -6,6 +6,13 @@ const notas = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
 function studentAverage() {
   // escreva seu código aqui
+
+  return alunos.map((student, currentStudent, arrayOfStudents) => {
+    return {
+      name: student,
+      average: parseFloat(notas[currentStudent].reduce((averageGrade, currentStudentGrade) => averageGrade + currentStudentGrade) / notas[currentStudent].length.toFixed(1)),
+    };
+  });
 }
 
 const expected = [
