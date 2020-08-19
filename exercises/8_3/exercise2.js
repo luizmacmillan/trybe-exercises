@@ -66,6 +66,15 @@ const books = [
 
 function allNames() {
   // escreva seu código aqui
+  return books.reduce((stringAllNames, currentName, currentIndex, array) => {
+    if (currentIndex === 0) {
+      return `${stringAllNames} ${currentName.author.name}`;
+    } else if (currentIndex === array.length - 1) {
+      return `${stringAllNames}, ${currentName.author.name}.`;
+    } else {
+      return `${stringAllNames}, ${currentName.author.name}`;
+    }
+  },'Nomes:');
 }
 
 assert.deepEqual(allNames(), "Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.");
