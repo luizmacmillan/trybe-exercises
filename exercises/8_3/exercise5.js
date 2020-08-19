@@ -6,10 +6,11 @@ const names = [
   'Abeladerco', 'Adieidy',  'Alarucha',
 ];
 
-
+const findingATimes = 
 
 function containsA() {
   // escreva seu código aqui
+  return names.reduce((aTimes, currentName) => aTimes + currentName.split('').reduce((aTimesAtCurrentName, currentNameLetter) => (currentNameLetter.toLocaleLowerCase() === 'a') ? aTimesAtCurrentName + 1 : aTimesAtCurrentName, 0), 0);
 }
 
 assert.deepEqual(containsA(), 20);
