@@ -29,6 +29,17 @@ const people = [
 ]
 
 // escreva filterPeople abaixo
+const filterPeople = (peopleList) => {
+    return peopleList
+    .filter((people) => {
+        const {nationality} = people;
+        if (nationality === 'Australian') return people;
+    })
+    .filter((people) => {
+        const {bornIn} = people;
+        if (bornIn <= 2000) return people;
+    });
+}
 
 const filteredPeople = filterPeople(people)
 
