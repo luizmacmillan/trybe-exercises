@@ -2,6 +2,10 @@ const assert = require('assert')
 
 // escreva sum abaixo
 
+const sum = (...numbers) => {
+  return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+
 assert.equal(sum(), 0)
 assert.equal(sum(1), 1)
 assert.equal(sum(1, 2), 3)
