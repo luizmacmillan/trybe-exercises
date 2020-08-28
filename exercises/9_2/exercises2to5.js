@@ -21,4 +21,4 @@ const kiMeter = new Promise((resolve, reject) => {
     console.log(`O Ki dele é muito baixo! Só ${response}... Que verme insolente!`);
     console.log(divisions);
   })
-  .catch();
+  .catch((response) => console.log(`${response}??? É mais de oito mil! Essa promise deve estar quebrada!`));
