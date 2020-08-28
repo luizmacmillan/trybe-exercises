@@ -14,11 +14,14 @@ const kiMeter = new Promise((resolve, reject) => {
   if (result > 8000) {
     return reject(result);
   }
-  resolve(result);})
-  .then(response => {
-    const numbersToDivide = [2, 3, 5, 10];
-    const divisions = numbersToDivide.map(number => parseInt(response / number));
-    console.log(`O Ki dele é muito baixo! Só ${response}... Que verme insolente!`);
-    console.log(divisions);
+  resolve(result);
+});
+
+kiMeter.then(response => {
+  const numbersToDivide = [2, 3, 5, 10];
+  const divisions = numbersToDivide.map(number => parseInt(response / number));
+  console.log(`O Ki dele é muito baixo! Só ${response}... Que verme insolente!`);
+  return divisions;
   })
-  .catch((response) => console.log(`${response}??? É mais de oito mil! Essa promise deve estar quebrada!`));
+  .then(response => console.log(response.reduce((arr, curr) => arr + curr)))
+  .catch(response => console.log(`${response}??? É mais de oito mil! Essa promise deve estar quebrada!`));

@@ -12,8 +12,6 @@ fetch(API_URL, myObject)
     jokeContainer.innerText = data.joke;
   });
 
-
-
 const fetchJoke = () => {
   
 };
