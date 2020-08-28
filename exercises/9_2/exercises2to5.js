@@ -15,5 +15,10 @@ const kiMeter = new Promise((resolve, reject) => {
     return reject(result);
   }
   resolve(result);})
-  .then(response => console.log(`O Ki dele é muito baixo! Só ${response}... Que verme insolente!`))
+  .then(response => {
+    const numbersToDivide = [2, 3, 5, 10];
+    const divisions = numbersToDivide.map(number => parseInt(response / number));
+    console.log(`O Ki dele é muito baixo! Só ${response}... Que verme insolente!`);
+    console.log(divisions);
+  })
   .catch();
