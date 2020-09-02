@@ -1,17 +1,9 @@
-const assert = require('assert');
+function sum(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new Error('parameters must be numbers');
+  }
 
-const arrays = [
-    ["1", "2", "3"],
-    [true],
-    [4, 5, 6]
-];
-
-
-function flatten() {
-  // escreva seu código aqui
-  return arrays.reduce((bigArray, currentArray) => bigArray.concat(currentArray), []);
+  return a + b;
 }
 
-assert.deepEqual(flatten(), ["1", "2", "3", true, 4, 5, 6]);
-
-// Dada uma matriz de matrizes, transforme em uma única matriz.
+module.exports = sum;

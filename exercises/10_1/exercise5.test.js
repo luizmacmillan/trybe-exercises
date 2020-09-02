@@ -1,16 +1,3 @@
-const assert = require('assert');
+const { obj1, obj2, obj3 } = require('./exercise5');
 
-const names = [
-  'Aanemarie',  'Adervandes',   'Akifusa',
-  'Abegildo',   'Adicellia',    'Aladonata',
-  'Abeladerco', 'Adieidy',  'Alarucha',
-];
-
-function containsA() {
-  // escreva seu código aqui
-  return names.reduce((aTimes, currentName) => aTimes + currentName.split('').reduce((aTimesAtCurrentName, currentNameLetter) => (currentNameLetter.toLocaleLowerCase() === 'a') ? aTimesAtCurrentName + 1 : aTimesAtCurrentName, 0), 0);
-}
-
-assert.deepEqual(containsA(), 20);
-
-// Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
+// Compare dois objetos (JSON) para verificar se são idênticos ou não

@@ -1,16 +1,20 @@
-const assert = require('assert');
+const obj1 = {
+  title: 'My Title',
+  description: 'My Description',
+};
 
-const names = [
-  'Aanemarie',  'Adervandes',   'Akifusa',
-  'Abegildo',   'Adicellia',    'Aladonata',
-  'Abeladerco', 'Adieidy',  'Alarucha',
-];
+const obj2 = {
+  description: 'My Description',
+  title: 'My Title',
+};
 
-function containsA() {
-  // escreva seu código aqui
-  return names.reduce((aTimes, currentName) => aTimes + currentName.split('').reduce((aTimesAtCurrentName, currentNameLetter) => (currentNameLetter.toLocaleLowerCase() === 'a') ? aTimesAtCurrentName + 1 : aTimesAtCurrentName, 0), 0);
+const obj3 = {
+  title: 'My Different Title',
+  description: 'My Description',
+};
+
+module.exports = {
+  obj1,
+  obj2,
+  obj3
 }
-
-assert.deepEqual(containsA(), 20);
-
-// Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
