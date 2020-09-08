@@ -17,3 +17,5 @@ describe('Mocking the file', () => {
     expect(concatStrings('Test', 'your', 'might')).toBe('Test your might');
   });
 });
+
+module.exports = { toUpperCase, firstLetter, concatStrings };
