@@ -7,6 +7,7 @@ const task = (value) => {
     <li>{value}</li>
   );
 }
+const taskArray = ['clean', 'study', 'read', 'watch tv', 'play games'];
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {taskArray.map(taskItem => task(taskItem))}
         </p>
         <a
           className="App-link"
