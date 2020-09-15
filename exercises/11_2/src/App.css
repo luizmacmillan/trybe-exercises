@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pokedex-body {
+  background-color: aliceblue;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: row wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5px;  
 }
 
-.App-link {
-  color: #61dafb;
+.poke-card {
+  align-items: center;
+  display: flex;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10%;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+  width: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.poke-info {
+  color: darkslategrey;
+}
+
+.poke-image {
+  height: 200px;
 }
