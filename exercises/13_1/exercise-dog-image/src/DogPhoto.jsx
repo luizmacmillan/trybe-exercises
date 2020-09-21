@@ -9,6 +9,7 @@ class DogPhoto extends React.Component {
     this.state = {
       currentImage: '',
       isLoading: true,
+      hasTerrier: false,
     }
   }
 
@@ -17,6 +18,7 @@ class DogPhoto extends React.Component {
     .then((response) => response.json())
     .then((data) => this.setState(() => ({
       currentImage: data.message,
+      hasTerrier: data.message.includes('terrier'),
       isLoading: false,
     })));
   }
@@ -31,6 +33,11 @@ class DogPhoto extends React.Component {
     this.setState({ isLoading: true }, () => {fetchDog()});
   }
 
+  shouldComponentUpdate(_nextProps, nextState) {
+    const { hasTerrier } = nextState;
+    return (hasTerrier ? false : true);
+  }
+
   render() {
     const { currentImage, isLoading } = this.state;
     return (
@@ -39,6 +46,13 @@ class DogPhoto extends React.Component {
         <div>{(isLoading) ? <h1>Loading...</h1> : <img src={currentImage} alt={currentImage.substr(30)} height="800" />}</div>
       </div>
     )
+  }
+
+  componentDidUpdate(_previousProp, previousState) {
+    const { previousImage } = previousState;
+    const { currentImage } = this.state;
+    localStorage.setItem('currentImage', previousImage);
+    if (currentImage !== '') alert(currentImage.split('/')[4]);
   }
 }
 
